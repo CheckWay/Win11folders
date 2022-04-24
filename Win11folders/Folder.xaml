@@ -1,0 +1,19 @@
+﻿<Window x:Class="Win11folders.Folder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Win11folders"
+        WindowStyle="None" AllowsTransparency="true"
+        mc:Ignorable="d" Background="Transparent"
+        Width="128" Height="128"
+        ResizeMode="NoResize"
+        MouseLeftButtonDown="MainWindow_OnMouseLeftButtonDown"
+        KeyUp="MainWindow_OnKeyUp">
+    <Grid>
+        <Rectangle Fill="Aqua" Name="Background" AllowDrop="True" StrokeLineJoin="Round"
+                   DragLeave="Background_OnDragLeave" Drop="Background_OnDrop" 
+                   Grid.ColumnSpan="2" DragOver="Background_OnDragOver"/>
+        <UniformGrid Name="Table"></UniformGrid>
+    </Grid>
+</Window>
